@@ -1,0 +1,118 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Compiled Go source code
+*.com
+*.class
+*.o
+*.a
+*.obj
+
+# Log files and other logs
+*.log
+logs/
+*.log.*
+*.log/
+*.logs/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# vim swap files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
+# Sublime project files
+*.sublime-workspace
+
+# VS Code directories/files
+.vscode/
+.history
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Go specific files
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Compiled Go packages
+*.pkg
+*.zip
+*.test
+
+# The go binary
+/bin/
+
+# The go-get command generates this directory and file
+/pkg/
+*.a
+
+# The go-import and go-source tools generate this directory
+/.imports/
+
+# Other Go binaries
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.pdb
+*.tmp
+
+# Sublime Text directories
+.sublime-project
+.sublime-workspace
+
+# JetBrains GoLand
+.idea/
+
+# Generated files by go tooling
+*.pb.go
+*.cover.*
+
+# Local .env files
+.env
