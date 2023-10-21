@@ -7,6 +7,7 @@ import (
 	"testing"
 
 	_ "github.com/lib/pq"
+
 )
 
 const (
@@ -16,7 +17,6 @@ const (
 
 var testQueries *Queries
 var testDB *sql.DB
-var fromAccountID sql.NullInt64
 
 func TestMain(m *testing.M) {
 	var err error
