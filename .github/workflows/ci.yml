@@ -36,13 +36,12 @@ jobs:
 
     - name: Install golang-migrate
       run: |
-       curl -L https://github.com/golang-migrate/migrate/releases/download/v4.14.1/migrate.windows-amd64.tar.gz -o migrate.tar.gz
-       tar xvzf migrate.tar.gz
-       Move-Item migrate.linux-amd64.exe migrate.exe
-       mkdir $HOME\go\bin
-       Move-Item migrate.exe $HOME\go\bin\migrate.exe
-       echo "::add-path::$HOME\go\bin"
-      shell: powershell
+        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.14.1/migrate.windows-amd64.tar.gz -o migrate.tar.gz
+        tar xvzf migrate.tar.gz
+        move migrate.linux-amd64.exe migrate.exe
+        mkdir %HOMEDRIVE%%HOMEPATH%\go\bin
+        move migrate.exe %HOMEDRIVE%%HOMEPATH%\go\bin\migrate.exe
+        echo %HOMEDRIVE%%HOMEPATH%\go\bin >> %GITHUB_PATH%
 
     - name: Run migrations
       run: make migrateup
