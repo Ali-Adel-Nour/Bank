@@ -36,13 +36,9 @@ jobs:
 
     - name: Install golang-migrate
       run: |
-        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.14.1/migrate.windows-amd64.tar.gz -o migrate.tar.gz
-        tar xvzf migrate.tar.gz
-        move migrate.linux-amd64.exe migrate.exe
-        mkdir %HOMEDRIVE%%HOMEPATH%\go\bin
-        move migrate.exe %HOMEDRIVE%%HOMEPATH%\go\bin\migrate.exe
-        echo %HOMEDRIVE%%HOMEPATH%\go\bin >> %GITHUB_PATH%
-
+       curl -L https://github.com/golang-migrate/migrate/releases/download/v4.14.1/migrate.linux-amd64.tar.gz | tar xvz
+        winpty mv migrate.linux-amd64 /usr/bin/migrate
+        which migrate
     - name: Run migrations
       run: make migrateup
 
