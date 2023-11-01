@@ -4,7 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 
 	db "github.com/Ali-Adel-Nour/Bank/db/sqlc"
-
 )
 
 // Server serves HTTP requests for our banking services
@@ -19,6 +18,7 @@ func NewServer(store *db.Store) *Server {
 
 	router.POST("/accounts", server.createAccount)
 	router.GET("/accounts/:id", server.getAccount)
+	router.GET("/accounts", server.listAccount)
 	server.router = router
 	return server
 }
